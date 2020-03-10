@@ -1,0 +1,26 @@
+{
+    "presets": [[
+        "@babel/env",
+    {
+        "corejs": 3, // version library polyfill - additional functions which haven't browser
+        "useBuiltIns": "usage", //babel try to find certain places in code where use new functions and connect only func for work
+        "debug": true, //for see what's kind of versions browsers
+        "targets": [
+            "> 0.3%", //amount of browsers that people use all over the world
+            "not ie > 0" //but this approach not so good enough for using
+        ]
+    }],
+        "@babel/react"],
+    "plugins": [
+        "@babel/proposal-class-properties",
+        ["@babel/plugin-transform-spread", {
+            "loose": true
+          }]
+    ]
+}
+
+/*"targets": {  // parametr list of browsers
+    "edge": "18",
+    "chrome": "54",
+    "ie": "11"
+}*/
